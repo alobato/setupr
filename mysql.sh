@@ -61,7 +61,7 @@ _mysql_install() {
   fi
 
   sudo debconf-set-selections <<< "mysql-server-5.1 mysql-server/root_password password $1"
-  sudo debconf-set-selections <<< "mysql-server-5.1 mysql-server/root_password_again password $1
+  sudo debconf-set-selections <<< "mysql-server-5.1 mysql-server/root_password_again password $1"
 
   _system_install 'mysql-server mysql-client libmysqlclient-dev'
 
