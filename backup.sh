@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 wget -N --quiet https://raw.github.com/alobato/setupr/master/lib.sh; . ./lib.sh
 
@@ -65,10 +65,7 @@ _backup_install() {
   gem install backup --no-ri --no-rdoc
   gem install fog --no-ri --no-rdoc
   gem install mail --no-ri --no-rdoc
-
-  if [ -z "rbenv" ]; then
-    rbenv rehash
-  fi
+  rbenv rehash
 
   # http://stackoverflow.com/a/878647
   crontab -l > tempfile
