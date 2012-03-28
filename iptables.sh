@@ -2,7 +2,7 @@
 
 wget -N --quiet https://raw.github.com/alobato/setupr/master/lib.sh; . ./lib.sh
 
-_check_root
+# _check_root
 
 ###############################################################################
 
