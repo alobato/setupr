@@ -61,12 +61,10 @@ _redis_install() {
   cd ~
   rm -rf ~/tmp
 
-  echo "export RAILS_ENV=production" >> ~/.bash_profile
-  echo "export RACK_ENV=production" >> ~/.bash_profile
-
-  sleep 2
-  source ~/.bash_profile
-  sleep 2
+  export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"
+  eval "$(rbenv init -)"
+  export RAILS_ENV=production
+  export RACK_ENV=production
 
   rbenv global 1.9.3-p125
   sleep 2
